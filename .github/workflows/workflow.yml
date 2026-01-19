@@ -71,10 +71,10 @@ jobs:
         uses: jfrog/setup-jfrog-cli@v4
         id: setup-cli
         env:
-          JF_URL: https://${{ vars.JF_URL }}/
-          JF_PROJECT: ${{ vars.JF_PROJECT }}
-          JF_USER: ${{ vars.JF_USER }}
-          JF_PASSWORD: ${{ vars.JF_PASSWORD }}
+          JF_URL: https://${{ secrets.JF_URL }}/
+          JF_PROJECT: ${{ secrets.JF_PROJECT }}
+          JF_USER: ${{ secrets.JF_USER }}
+          JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
         #with:
         #  oidc-provider-name: denv-github
         #  oidc-audience: denv-audience
