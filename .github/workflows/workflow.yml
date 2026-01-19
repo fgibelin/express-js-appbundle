@@ -73,9 +73,11 @@ jobs:
         env:
           JF_URL: https://${{ vars.JF_URL }}/
           JF_PROJECT: ${{ vars.JF_PROJECT }}
-        with:
-          oidc-provider-name: denv-github
-          oidc-audience: denv-audience
+          JF_USER: ${{ vars.JF_USER }}
+          JF_PASSWORD: ${{ vars.JF_PASSWORD }}
+        #with:
+        #  oidc-provider-name: denv-github
+        #  oidc-audience: denv-audience
 
       - name: NPM Curation Audit 
         run: |
