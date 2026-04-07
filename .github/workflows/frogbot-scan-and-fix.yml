@@ -1,8 +1,5 @@
 name: "Frogbot Scan and Fix"
 on:
-  schedule:
-    # The repository will be scanned based on the following cron expression
-    - cron: "0 0 * 1 *"
   workflow_dispatch:
     inputs:
       run_reason:
